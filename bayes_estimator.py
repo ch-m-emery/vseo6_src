@@ -90,10 +90,10 @@ class DAExperiment():
                 row_obs = e - 1
                 if row_obs < 0:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs > self.model.n_dim:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs == k:
                     if self.dct_obs["variable"] == "q":
                         ax.plot(VEC_TOBS, self.dct_obs["yobs"], '. g', markeredgecolor=(0., 0.0, 1.), label="Q obs")
