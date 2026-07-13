@@ -151,10 +151,10 @@ class DAExperiment():
                 row_obs = e - 1
                 if row_obs < 0:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs > self.model.n_dim:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs == k:
                     ax.plot(VEC_TOBS, self.dct_obs["yobs"], '. g', label="Q obs")
 
@@ -214,10 +214,10 @@ class DAExperiment():
                 row_obs = e - 1
                 if row_obs < 0:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs > self.model.n_dim:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs == k:
                     ax.plot(VEC_TOBS, self.dct_obs["yobs"], '. g', label="Q obs")
 
@@ -280,10 +280,10 @@ class DAExperiment():
                 row_obs = e - 1
                 if row_obs < 0:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs > self.model.n_dim:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs == k:
                     ax.plot(VEC_TOBS, self.dct_obs["yobs"], '. g', label="Q obs")
 
@@ -364,10 +364,10 @@ class DAExperiment():
                 row_obs = e - 1
                 if row_obs < 0:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs > self.model.n_dim:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs == k:
                     ax.plot(VEC_TOBS, self.dct_obs["yobs"], '. g', label=str_labl_obs)
 
@@ -494,10 +494,10 @@ class DAExperiment():
                 row_obs = e - 1
                 if row_obs < 0:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs > self.model.n_dim:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs == k:
                     ax.plot(VEC_TOBS, self.dct_obs["yobs"], '. g', label=str_labl_obs)
 
@@ -660,10 +660,10 @@ class DAExperiment():
                 row_obs = e - 1
                 if row_obs < 0:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs > self.model.n_dim:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs == k:
                     ax.plot(VEC_TOBS, self.dct_obs["yobs"], '. g', label="Q obs")
 
@@ -722,10 +722,10 @@ class DAExperiment():
                 row_obs = e - 1
                 if row_obs < 0:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs > self.model.n_dim:
                     raise ValueError(
-                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs["reach"]}.")
+                        f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs == k:
                     ax.plot(VEC_TOBS, self.dct_obs["yobs"], '. g', label=str_labl_obs)
 
