@@ -561,10 +561,10 @@ class DAExperiment():
             ax = axis[i, j]
             ax.set_title(f"Reach {k + 1}")
 
-            ax.plot(q_bck_out_ts[k, :], "-b", label="free run")
-            ax.plot(q_ana_out_ts[k, :], "-r", linewidth=0.75, label="analysis run")
+            ax.plot(q_bck_out_ts[k, :], "-b", linewidth=0.8, label="free run")
+            ax.plot(q_ana_out_ts[k, :], "-r", label="analysis run")
             ax.set_ylabel("discharge")
-            ax.set_ylim((0., flt_max_q))
+            # ax.set_ylim((0., flt_max_q))
             ax.set_xlim((0., np.amax(self.vec_t_obs)))
 
             for e in self.dct_obs["reach"]:
