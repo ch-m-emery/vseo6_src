@@ -501,9 +501,11 @@ class DAExperiment():
         q_ana_out_ts = np.zeros_like(q_bck_out_ts)
 
         # Bayes estimator parameters
-        B = self.sig_b ** 2 * np.eye(self.model.n_dim)
+
         if b_in is not None:
             B = b_in
+        else:
+            B = self.sig_b ** 2 * np.eye(self.model.n_dim)
         R = self.sig_o ** 2
 
         H = np.zeros((1, self.model.n_dim))
@@ -536,7 +538,8 @@ class DAExperiment():
         """
         """
 
-        self.sig_b = sig_b_in
+        if sig_b_in is not None:
+            self.sig_b = sig_b_in
         self.sig_o = sig_o_in
 
         if self.dct_ctl["experiment_type"] == "state":
