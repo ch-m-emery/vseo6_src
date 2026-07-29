@@ -553,7 +553,7 @@ class DAExperiment():
 
         flt_max_q = max(np.amax(q_bck_out_ts)*1.1, np.amax(q_ana_out_ts)*1.1)
 
-        fig, axis = plt.subplots(3, 3, figsize=(12, 9))
+        fig, axis = plt.subplots(3, 3, figsize=(16, 9))
         l_filled_positions = [(0, 0), (0, 1), (1, 1), (1, 2), (2, 2)]
         fig.suptitle("State estimation - Full experiment")
 
@@ -561,10 +561,12 @@ class DAExperiment():
             ax = axis[i, j]
             ax.set_title(f"Reach {k + 1}")
 
-            ax.plot(q_bck_out_ts[k, :], "-b", linewidth=0.8, label="free run")
+            ax.plot(q_bck_out_ts[k, :], "-b", label="free run")
             ax.plot(q_ana_out_ts[k, :], "-r", label="analysis run")
             ax.set_ylabel("discharge")
-            # ax.set_ylim((0., flt_max_q))
+            flt_max_q = max(np.amax(q_bck_out_ts[k, :]) * 1.1, np.amax(q_ana_out_ts[k, :]) * 1.1)
+            flt_min_q = min(np.amin(q_bck_out_ts[k, :]) * 0.9, np.amin(q_ana_out_ts[k, :]) * 0.9)
+            ax.set_ylim((flt_min_q, flt_max_q))
             ax.set_xlim((0., np.amax(self.vec_t_obs)))
 
             for e in self.dct_obs["reach"]:
@@ -576,7 +578,7 @@ class DAExperiment():
                     raise ValueError(
                         f"Invalid reach id, must be between 1 and {self.model.n_dim}, got {self.dct_obs['reach']}.")
                 if row_obs == k:
-                    ax.plot(VEC_TOBS, self.dct_obs["yobs"], '. g', label="Q obs")
+                    ax.plot(VEC_TOBS, self.dct_obs["yobs"], '. g', label="obs")
 
             ax.legend(loc='lower right', fontsize=8)
             ax.grid(True, which='both', linestyle='--', alpha=0.6)
