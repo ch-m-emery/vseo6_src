@@ -175,9 +175,12 @@ class DAExperiment():
 
         return q_run[:,-1], q_run
 
-    def perform_state_estimation_analysis(self, assim_iter=0, xb=None, q_run=None):
+    def perform_state_estimation_analysis(self, sig_b_in=None, sig_o_in=None, assim_iter=0, xb=None, q_run=None):
         """Perform the analysis step of a single cycle of state estimation
         """
+
+        self.sig_b = sig_b_in
+        self.sig_o = sig_o_in
 
         # Bayes estimator parameters
         B = self.sig_b ** 2 * np.eye(self.model.n_dim)
@@ -529,9 +532,12 @@ class DAExperiment():
 
         return q_bck_out_ts, q_ana_out_ts
 
-    def perform_assim(self, b_in=None, bool_diag_obs=False):
+    def perform_assim(self, sig_b_in=None, sig_o_in=None, b_in=None, bool_diag_obs=False):
         """
         """
+
+        self.sig_b = sig_b_in
+        self.sig_o = sig_o_in
 
         if self.dct_ctl["experiment_type"] == "state":
             q_bck_out_ts, q_ana_out_ts = self._perform_state_assim(b_in=b_in)
